@@ -1,14 +1,4 @@
 $colorWhite: #fff;
-$colorBlack: #000;
-$colorGrey: #666;
-$colorLightGrey: #999;
-$colorDarkGrey: #333;
-$colorGreen: #4ab020;
-$colorLightGreen: #99c71f;
-$colorDarkGreen: #648300;
-$colorRed: #b01e1e;
-$colorLightRed: #ce7f7f;
-$colorDarkRed: #881616;
 
 html,
 body {
@@ -16,7 +6,7 @@ body {
 }
 
 body {
-	color: $colorBlack;
+	color: $colorWhite;
 	font-size: 14px;
 	font-family: Roboto, sans-serif;
 	line-height: 1.25;
