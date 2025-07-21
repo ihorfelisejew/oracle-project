@@ -1,8 +1,9 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>Oracle</title>
 	<meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,37 +11,780 @@
 <meta name="theme-color" content="#fff">
 <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
 <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+
+<!-- Style files-->
 <link rel="stylesheet" media="all" href="css/libs.css" />
 <link rel="stylesheet" media="all" href="css/style.css" />
-
+<!-- Swiper styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
-<!-- BEGIN  wrapper-->
-<div class="wrapper">
-	<header class="header">
-	<div class="container">
-		I am a header
+	<!-- BEGIN  wrapper-->
+	<div class="wrapper">
+		<header class="header">
+	<div class="shipping-notice__wrapper">
+		<p class="shipping__notice">
+			Free worldwide shipping for orders over $200
+		</p>
+	</div>
+	<div class="header__container">
+		<div class="header__content">
+			<div class="header__info">
+				<a href="#" class="header__logo">
+					<span class="icon-logo header__logo-image">
+					</span>
+				</a>
+				<ul class="header__menu">
+					<li class="menu__item">
+						<button class="menu-item__content menu-item__button" data-menu="jewerly-menu">
+							Jewelry
+							<svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L11 1" stroke="currentColor" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</button>
+					</li>
+					<li class="menu__item">
+						<button class="menu-item__content menu-item__button" data-menu="collection-menu">
+							Collections
+							<svg width="12" height="7" viewBox="0 0 12 7" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1L6 6L11 1" stroke="currentColor" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</button>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu-item__content menu-item__link">
+							Blog
+						</a>
+					</li>
+					<li class="menu__item">
+						<a href="#" class="menu-item__content menu-item__link">
+							Contacts
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header__buttons">
+				<button class="header__button-item search__button">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.25" />
+						<path d="M20 20L17 17" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+					</svg>
+				</button>
+				<a href="#" class="header__button-item profile__button">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="12" cy="8" r="3.375" stroke="currentColor" stroke-width="1.25"
+							stroke-linecap="round" />
+						<path
+							d="M4.84913 16.9479C5.48883 14.6034 7.91473 13.5 10.345 13.5H13.655C16.0853 13.5 18.5112 14.6034 19.1509 16.9479C19.282 17.4287 19.3868 17.9489 19.4462 18.5015C19.5052 19.0507 19.0523 19.5 18.5 19.5H5.5C4.94772 19.5 4.49482 19.0507 4.55382 18.5015C4.6132 17.9489 4.71796 17.4287 4.84913 16.9479Z"
+							stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+					</svg>
+				</a>
+				<button class="header__button-item cart__button">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8 8L8 7C8 4.79086 9.79086 3 12 3V3C14.2091 3 16 4.79086 16 7L16 8"
+							stroke="currentColor" stroke-width="1.25" stroke-linecap="round" />
+						<path
+							d="M4 12C4 10.1144 4 9.17157 4.58579 8.58579C5.17157 8 6.11438 8 8 8H16C17.8856 8 18.8284 8 19.4142 8.58579C20 9.17157 20 10.1144 20 12V13C20 16.7712 20 18.6569 18.8284 19.8284C17.6569 21 15.7712 21 12 21V21C8.22876 21 6.34315 21 5.17157 19.8284C4 18.6569 4 16.7712 4 13V12Z"
+							stroke="currentColor" stroke-width="1.25" />
+					</svg>
+					(2)
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="categories__wrapper jewerly-menu">
+		<div class="categories__container">
+			<div class="categories__list">
+				<ul class="categories__column">
+					<li class="category__item title-item">
+						<a href="#" class="category__link">
+							Rings
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Wedding rings
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							For an engagement
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Phalanx
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							With a pearl
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							With a diamond
+						</a>
+					</li>
+				</ul>
+				<ul class="categories__column">
+					<li class="category__item title-item">
+						<a href="#" class="category__link">
+							Bracelets
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Soft
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Straunch
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							On a thread
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Leather
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							For charms
+						</a>
+					</li>
+				</ul>
+				<ul class="categories__column">
+					<li class="category__item title-item">
+						<a href="#" class="category__link">
+							Earrings
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Earrings - pendants
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Broaches
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Сloves
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Congo
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Cafes
+						</a>
+					</li>
+				</ul>
+				<ul class="categories__column">
+					<li class="category__item title-item">
+						<a href="#" class="category__link">
+							Necklaces
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Invisible
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Multi-layered
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							With a pearl
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							With a diamond
+						</a>
+					</li>
+				</ul>
+				<ul class="categories__column">
+					<li class="category__item title-item">
+						<a href="#" class="category__link">
+							Unusual Jewelry
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Brooches
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Сrosses
+						</a>
+					</li>
+				</ul>
+				<ul class="categories__column">
+					<li class="category__item title-item">
+						<a href="#" class="category__link">
+							Certificate
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="categories__wrapper collection-menu">
+		<div class="categories__container">
+			<div class="categories__list">
+				<ul class="categories__column">
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Bondi
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							India
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							Lake
+						</a>
+					</li>
+					<li class="category__item">
+						<a href="#" class="category__link">
+							First Love
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </header>
+		<main class="main__page">
+			<section class="first-screen">
+				<div class="first-screen__bg">
+					<img src="./img/main_first-screen-bg.png" alt="oracle - jewelry">
+				</div>
+				<div class="first-screen__content">
+					<h1 class="first-screen__title">
+						Jewelry is made with love
+					</h1>
+					<button class="first-screen__button btn white-btn">
+						Shop Now
+					</button>
+				</div>
+			</section>
+			<section class="popular-goods">
+				<div class="popular-goods__container">
+					<h2 class="popular-goods__title title">
+						Popular Items
+					</h2>
+					<div class="popular-goods__list">
+						<div class="product__item">
+	<a href="#" class="image__block">
+		<span class="product__label">New</span>
+		<img src="./img/main_popular-goods_1.png" alt="Kazaur Weaving Ring">
+		<span class="view-more">View More</span>
+	</a>
+	<a href="#" class="product__name">Kazaur Weaving Ring</a>
+	<p class="product__price">
+		$132.00
+		<span class="old-price"></span>
+	</p>
+</div>
 
-	<main class="main">
-		<h1>hello world!</h1>
-		<h2>hello world!</h2>
-		<h3>hello world!</h3>
-	</main>
-	<footer class="footer">
-	<div class="container">
-		<div>facebook.com/include</div>
-		<div>twitter.com/include</div>
-		I am a footer
+						<div class="product__item">
+	<a href="#" class="image__block">
+		<span class="product__label">New</span>
+		<img src="./img/main_popular-goods_2.png" alt="Audrey Long Ring">
+		<span class="view-more">View More</span>
+	</a>
+	<a href="#" class="product__name">Audrey Long Ring</a>
+	<p class="product__price">
+		$92.00
+		<span class="old-price"></span>
+	</p>
+</div>
+
+						<div class="product__item">
+	<a href="#" class="image__block">
+		<span class="product__label">New</span>
+		<img src="./img/main_popular-goods_3.png" alt="Kazaur Male Ring">
+		<span class="view-more">View More</span>
+	</a>
+	<a href="#" class="product__name">Kazaur Male Ring</a>
+	<p class="product__price">
+		$136.00
+		<span class="old-price"></span>
+	</p>
+</div>
+
+						<div class="product__item">
+	<a href="#" class="image__block">
+		<span class="product__label">New</span>
+		<img src="./img/main_popular-goods_4.png" alt="Guardian Luna Circle Necklace">
+		<span class="view-more">View More</span>
+	</a>
+	<a href="#" class="product__name">Guardian Luna Circle Necklace</a>
+	<p class="product__price">
+		$180.00
+		<span class="old-price"></span>
+	</p>
+</div>
+					</div>
+					<div class="popular-goods__more-container">
+						<a href="#" class="popular-goods__more link">Show More</a>
+					</div>
+				</div>
+			</section>
+			<section class="categories">
+				<div class="categories__container">
+					<h2 class="categories__title">
+						Minimalism and simplicity combined with interesting shapes. Choose a piece of jewelry that you
+						like.
+					</h2>
+					<div class="categories__list">
+						<a href="#" class="category__item earrings">
+							<img src="./img/main_category_1.png" alt="Earrings">
+							<span>Earrings</span>
+						</a>
+						<a href="#" class="category__item bracelets">
+							<img src="./img/main_category_2.png" alt="Earrings">
+							<span>Bracelets</span>
+						</a>
+						<a href="#" class="category__item rings">
+							<img src="./img/main_category_3.png" alt="Earrings">
+							<span>Rings</span>
+						</a>
+						<a href="#" class="category__item unusual">
+							<img src="./img/main_category_4.png" alt="Earrings">
+							<span>Unusual</span>
+						</a>
+						<a href="#" class="category__item necklaces">
+							<img src="./img/main_category_5.png" alt="Earrings">
+							<span>Necklaces</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="blog-block">
+				<div class="blog__container">
+					<h2 class="blog__title title">
+						Blog
+					</h2>
+					<div class="blog__list swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide blog__item">
+								<a href="#" class="image-block">
+									<img src="./img/main__blog-1.png" alt="Jewelry Cleaning">
+								</a>
+								<a href="#" class="blog-item__title">
+									Jewelry Cleaning
+								</a>
+								<p class="blog-item__date">
+									March 25, 2022
+								</p>
+								<p class="blog-item__desc">
+									Experts strongly recommend not to do makeup before flying on an airplane, even if
+									there should be a very short flight. The fact is that the cabin is very low
+									humidity, it never rises ...
+								</p>
+								<a href="#" class="blog-item__more link">
+									Read More
+								</a>
+							</div>
+							<div class="swiper-slide blog__item">
+								<a href="#" class="image-block">
+									<img src="./img/main__blog-2.png" alt="Jewelry Cleaning">
+								</a>
+								<a href="#" class="blog-item__title">
+									Interesting and trendy forms
+								</a>
+								<p class="blog-item__date">
+									March 25, 2022
+								</p>
+								<p class="blog-item__desc">
+									Experts strongly recommend not to do makeup before flying on an airplane, even if
+									there should be a very short flight. The fact is that the cabin is very low
+									humidity, it never rises ...
+								</p>
+								<a href="#" class="blog-item__more link">
+									Read More
+								</a>
+							</div>
+							<div class="swiper-slide blog__item">
+								<a href="#" class="image-block">
+									<img src="./img/main__blog-3.png" alt="Jewelry Cleaning">
+								</a>
+								<a href="#" class="blog-item__title">
+									Pearls in gold jewelry
+								</a>
+								<p class="blog-item__date">
+									March 25, 2022
+								</p>
+								<p class="blog-item__desc">
+									Experts strongly recommend not to do makeup before flying on an airplane, even if
+									there should be a very short flight. The fact is that the cabin is very low
+									humidity, it never rises ...
+								</p>
+								<a href="#" class="blog-item__more link">
+									Read More
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="new-collection">
+				<img class="new-collection__bg" src="./img/main_new-collection_bg.png" alt="New Collection">
+				<h2 class="new-collection__title">
+					New Collection 2024
+				</h2>
+				<a href="#" class="new-collection__btn btn white-btn">
+					Shop Now
+				</a>
+			</section>
+			<section class="promo-block">
+				<div class="promo-block__container">
+					<div class="promo__video-block">
+						<div class="video-block__info">
+							<p class="video-block__label">
+								View our video presentation
+							</p>
+							<h2 class="video-block__title title">
+								Fierce elegance encapsulates genuineness, beauty and poise.
+							</h2>
+							<p class="video-block__desc">
+								It melds a strong essence of refinement with a hint of self-assured allure, yielding a
+								refined and commanding presence reminiscent of a resolute and graceful woman.
+							</p>
+						</div>
+						<div class="video-block__content">
+							<video loop playsinline poster="./img/main_video-preview.png">
+								<source src="./img/main_promo-video.mov" type="video/mp4" />
+								Oracle Jewelry - Elegance
+							</video>
+							<button class="video-block__play">
+								<svg width="120" height="120" viewBox="0 0 120 120" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M60 13.125C50.729 13.125 41.6662 15.8742 33.9577 21.0249C26.2491 26.1756 20.241 33.4964 16.6932 42.0617C13.1453 50.627 12.217 60.052 14.0257 69.1449C15.8344 78.2377 20.2988 86.59 26.8544 93.1456C33.41 99.7012 41.7623 104.166 50.8552 105.974C59.948 107.783 69.373 106.855 77.9383 103.307C86.5036 99.759 93.8245 93.7509 98.9752 86.0424C104.126 78.3338 106.875 69.271 106.875 60C106.861 47.5722 101.918 35.6573 93.1306 26.8694C84.3428 18.0816 72.4279 13.1386 60 13.125ZM60 103.125C51.4707 103.125 43.1329 100.596 36.0411 95.8571C28.9492 91.1185 23.4217 84.3833 20.1577 76.5032C16.8937 68.6232 16.0397 59.9522 17.7037 51.5867C19.3676 43.2213 23.4749 35.5372 29.506 29.506C35.5372 23.4749 43.2213 19.3676 51.5868 17.7036C59.9522 16.0396 68.6232 16.8937 76.5032 20.1577C84.3833 23.4217 91.1185 28.9492 95.8571 36.041C100.596 43.1329 103.125 51.4707 103.125 60C103.113 71.4337 98.5651 82.3955 90.4803 90.4803C82.3955 98.5651 71.4337 103.113 60 103.125ZM76.0406 58.4391L53.5406 43.4391C53.2582 43.2506 52.9299 43.1424 52.5908 43.126C52.2516 43.1095 51.9144 43.1855 51.6151 43.3458C51.3157 43.506 51.0655 43.7446 50.8911 44.0359C50.7168 44.3272 50.6248 44.6605 50.625 45V75C50.6246 75.3395 50.7164 75.6728 50.8906 75.9642C51.0648 76.2556 51.3149 76.4943 51.6141 76.6547C51.9136 76.8151 52.251 76.8911 52.5903 76.8745C52.9297 76.858 53.2581 76.7496 53.5406 76.5609L76.0406 61.5609C76.2978 61.3898 76.5087 61.1577 76.6546 60.8854C76.8005 60.6131 76.8769 60.3089 76.8769 60C76.8769 59.6911 76.8005 59.3869 76.6546 59.1146C76.5087 58.8423 76.2978 58.6102 76.0406 58.4391ZM54.375 71.4984V48.5016L71.6203 60L54.375 71.4984Z"
+										fill="currentColor" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="promo-list">
+						<div class="promo__list-item gift-card__image">
+							<img src="./img/main_gift-card.png" alt="ORACLE Gift Card">
+						</div>
+						<div class="promo__list-item gift-card__content">
+							<h3 class="gift-card__title title">
+								Gift Card
+							</h3>
+							<p class="gift-card__desc">
+								We don’t have any ideas what to give ourselves, or are you doubting your choice?A gift
+								certificate is a modern way to bring in friends and relatives, to pick out those who are
+								dear to your heart.
+							</p>
+							<div class="gift-card__price">
+								<button class="price__button">
+									<span>$200</span>
+									<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M9.03939 0.217251C9.08632 0.16946 9.15021 0.142578 9.21686 0.142578C9.28351 0.142578 9.3474 0.16946 9.39433 0.217251L9.92425 0.752434C9.97258 0.798244 10 0.862204 10 0.929145C10 0.996086 9.97258 1.06005 9.92425 1.10586L5.32995 5.74579C5.2597 5.81682 5.1644 5.85678 5.06499 5.85686L4.93501 5.85686C4.8356 5.85678 4.7403 5.81682 4.67005 5.74579L0.0757474 1.10586C0.0274162 1.06005 -3.7308e-08 0.996086 -3.43819e-08 0.929144C-3.14558e-08 0.862203 0.0274162 0.798243 0.0757475 0.752433L0.605667 0.21725C0.652601 0.169459 0.716492 0.142578 0.78314 0.142578C0.84979 0.142578 0.913679 0.169459 0.960613 0.21725L5 4.29676L9.03939 0.217251Z"
+											fill="currentColor" />
+									</svg>
+								</button>
+								<ul class="price__dropdown">
+									<li class="price__item active">
+										<button>$200</button>
+									</li>
+									<li class="price__item">
+										<button>$500</button>
+									</li>
+									<li class="price__item">
+										<button>$1000</button>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="gift-card__buy-now btn">Buy Now</a>
+						</div>
+						<div class="promo__list-item sale__info">
+							<h3 class="sale-info__title title">
+								Hurry! Sale 50%
+							</h3>
+							<p class="sale-info__desc">
+								We don’t have any ideas what to give ourselves, or are you doubting your choice?A gift
+								certificate is a modern way to bring in friends and relatives, to pick out those who are
+								dear to your heart.
+							</p>
+							<a href="#" class="sale-info__shop-now btn">
+								Shop Now
+							</a>
+						</div>
+						<div class="promo__list-item sale__image">
+							<img src="./img/main_sale-image.png" alt="Sale 50%">
+						</div>
+						<div class="promo__list-item newsletter__image">
+							<img src="./img/main_newsletter-image.png" alt="Newsletter">
+						</div>
+						<div class="promo__list-item newsletter__info">
+							<h3 class="newsletter__title title">
+								Newsletter
+							</h3>
+							<p class="newsletter__desc">
+								Sign up for exclusive deals and early access to new products.
+							</p>
+							<form class="newsletter__form">
+								<input type="email" name="email" id="email" placeholder="Your Email">
+								<button type="submit" class="newsletter__submit btn">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer-top">
+		<div class="footer-top__container">
+			<div class="footer-top__content">
+				<ul class="footer__links-list footer__categories">
+					<li class="column__title">
+						Jewelry
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Rings
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Bracelets
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Earrings
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Necklaces
+						</a>
+					</li>
+				</ul>
+				<ul class="footer__links-list footer__collections">
+					<li class="column__title">
+						Collections
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Bondi
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							India
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Lake
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							First Love
+						</a>
+					</li>
+				</ul>
+				<ul class="footer__links-list footer__pages">
+					<li class="column__title">
+						Company
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Blog
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Contacts
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							FAQ
+						</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="#" class="footer__item-link">
+							Privacy Policy
+						</a>
+					</li>
+				</ul>
+				<div class="footer__social">
+					<h4 class="column__title">
+						Follow Us
+					</h4>
+					<ul class="social__list">
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_facebook"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_twitter"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_instagram"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_pinterest"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_tumbrl"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_snapchat"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_youtube"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_vimeo"></span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#" class="footer__item-link social-link">
+								<span class="icon-footer_tiktok"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__story">
+					<h4 class="column__title">
+						Our Story
+					</h4>
+					<p class="story__text">
+						The brand is experimenting with design, which is reflected in new collections. The style of
+						jewelry organically echoes fashion trends, emphasizing the trendy modern sound.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="footer-bottom__container">
+			<div class="bottom__content">
+				<div class="info-block currency">
+					<button class="info-block__button currency__button">
+						<span>United States (USA $)</span>
+						<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M9.03939 0.217251C9.08632 0.16946 9.15021 0.142578 9.21686 0.142578C9.28351 0.142578 9.3474 0.16946 9.39433 0.217251L9.92425 0.752434C9.97258 0.798244 10 0.862204 10 0.929145C10 0.996086 9.97258 1.06005 9.92425 1.10586L5.32995 5.74579C5.2597 5.81682 5.1644 5.85678 5.06499 5.85686L4.93501 5.85686C4.8356 5.85678 4.7403 5.81682 4.67005 5.74579L0.0757474 1.10586C0.0274162 1.06005 -3.7308e-08 0.996086 -3.43819e-08 0.929144C-3.14558e-08 0.862203 0.0274162 0.798243 0.0757475 0.752433L0.605667 0.21725C0.652601 0.169459 0.716492 0.142578 0.78314 0.142578C0.84979 0.142578 0.913679 0.169459 0.960613 0.21725L5 4.29676L9.03939 0.217251Z"
+								fill="currentColor" />
+						</svg>
+					</button>
+					<ul class="info-block__dropdown currency__dropdown">
+						<li class="dropdown__item active currency__item">
+							<button>United States (USA $)</button>
+						</li>
+						<li class="dropdown__item currency__item">
+							<button>Euro (EUR €)</button>
+						</li>
+						<li class="dropdown__item currency__item">
+							<button>Hryvnia (UAH ₴)</button>
+						</li>
+					</ul>
+				</div>
+				<div class="info-block language">
+					<button class="info-block__button language__button">
+						<span>English</span>
+						<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M9.03939 0.217251C9.08632 0.16946 9.15021 0.142578 9.21686 0.142578C9.28351 0.142578 9.3474 0.16946 9.39433 0.217251L9.92425 0.752434C9.97258 0.798244 10 0.862204 10 0.929145C10 0.996086 9.97258 1.06005 9.92425 1.10586L5.32995 5.74579C5.2597 5.81682 5.1644 5.85678 5.06499 5.85686L4.93501 5.85686C4.8356 5.85678 4.7403 5.81682 4.67005 5.74579L0.0757474 1.10586C0.0274162 1.06005 -3.7308e-08 0.996086 -3.43819e-08 0.929144C-3.14558e-08 0.862203 0.0274162 0.798243 0.0757475 0.752433L0.605667 0.21725C0.652601 0.169459 0.716492 0.142578 0.78314 0.142578C0.84979 0.142578 0.913679 0.169459 0.960613 0.21725L5 4.29676L9.03939 0.217251Z"
+								fill="currentColor" />
+						</svg>
+					</button>
+					<ul class="info-block__dropdown language__dropdown">
+						<li class="dropdown__item active language__item">
+							<button>English</button>
+						</li>
+						<li class="dropdown__item language__item">
+							<button>Ukrainian</button>
+						</li>
+						<li class="dropdown__item language__item">
+							<button>Polish</button>
+						</li>
+						<li class="dropdown__item language__item">
+							<button>German</button>
+						</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					© 2022 Bullet beauty. All rights reserved. Powered by Shopify
+				</div>
+				<div class="footer__payments">
+					<img src="./img/payment_discover.png" alt="Discover">
+					<img src="./img/payment_diners.png" alt="Diners Club">
+					<img src="./img/payment_paypal.png" alt="PayPal">
+					<img src="./img/payment_amex.png" alt="AMEX">
+					<img src="./img/payment_mastercard.png" alt="MasterCard">
+					<img src="./img/payment_visa.png" alt="Visa">
+				</div>
+			</div>
+		</div>
 	</div>
 </footer>
+	</div>
+	<!-- END wrapper-->
+	<!-- Swiper script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-</div>
-<!-- END wrapper-->
 <script src="js/jquery.js"></script>
 <script src="js/libs.js"></script>
 <script src="js/app.js"></script>
-
+<script src="js/header-scrolled.js"></script>
+<script src="js/footer-dropdowns.js"></script>
+<script src="js/main_gift-card-dropdown.js"></script>
+<script src="js/main_play-promo.js"></script>
+<script src="js/main_blog-slider.js"></script>
 </body>
+
 </html>

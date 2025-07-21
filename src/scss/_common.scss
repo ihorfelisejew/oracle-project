@@ -1,4 +1,14 @@
-$colorWhite: #fff;
+$black-primary: #000;
+$dark-grey-secondary: #6e7172;
+$grey: #999;
+$light-grey: #f8f9fa;
+$white: #fff;
+$red-primary: #d72c0d;
+$red-secondary: #fbedea;
+$font-family: "Poppins", sans-serif;
+$second-family: "Inter", sans-serif;
+$third-family: "SF Pro Display", sans-serif;
+$font3: "Cormorant Upright", sans-serif;
 
 html,
 body {
@@ -6,10 +16,11 @@ body {
 }
 
 body {
-	color: $colorWhite;
+	color: $black-primary;
 	font-size: 14px;
-	font-family: Roboto, sans-serif;
+	font-family: $font-family;
 	line-height: 1.25;
+	font-weight: 400;
 }
 
 * {
@@ -26,6 +37,7 @@ h6 {
 	font-size: 1em;
 	line-height: 1;
 	margin: 0;
+	cursor: default;
 }
 
 img {
@@ -52,6 +64,7 @@ ol {
 
 p {
 	margin: 0;
+	cursor: default;
 }
 
 button {
@@ -73,4 +86,32 @@ button {
 	min-width: 320px;
 	min-height: 100%;
 	overflow: hidden;
+}
+
+[class*="__container"] {
+	max-width: 1506px;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+
+	@media (max-width: 1680px) {
+		max-width: 1280px;
+	}
+
+	@media (max-width: 1440px) {
+		max-width: 1200px;
+	}
+
+	@media (max-width: 1280px) {
+		max-width: 1030px;
+	}
+
+	@media (max-width: 1110px) {
+		max-width: 920px;
+	}
+
+	@media (max-width: 980px) {
+		max-width: 100%;
+		padding: 40px;
+	}
 }

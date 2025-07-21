@@ -1,0 +1,484 @@
+.main__page {
+	.first-screen {
+		height: 100vh;
+		min-height: 100vh;
+		position: relative;
+		padding-top: 48px;
+
+		&__bg {
+			position: absolute;
+			left: 0;
+			top: 0px;
+			height: 100%;
+			width: 100vw;
+			overflow: hidden;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			z-index: 1;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: top;
+			}
+		}
+
+		&__content {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding-bottom: 80px;
+			justify-content: flex-end;
+			z-index: 2;
+			position: relative;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		&__title {
+			font-weight: 600;
+			font-size: 60px;
+			line-height: 117%;
+			letter-spacing: 0.02em;
+			color: $white;
+			font-family: $font-family;
+			cursor: default;
+		}
+	}
+
+	.popular-goods {
+		padding: 120px 0px;
+
+		&__title {
+			margin: 0 auto 40px;
+			text-align: center;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 30px;
+		}
+
+		&__more-container {
+			padding: 40px 0px;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	.categories {
+		padding-bottom: 120px;
+
+		&__title {
+			font-family: $font-family;
+			font-weight: 600;
+			font-size: 60px;
+			line-height: 117%;
+			letter-spacing: 0.02em;
+			color: $black-primary;
+			margin-bottom: 120px;
+		}
+
+		&__list {
+			display: grid;
+			grid-template-columns: 2fr 1fr 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			column-gap: 30px;
+			row-gap: 37px;
+			grid-template-areas:
+				"earrings bracelets rings"
+				"earrings unusual necklaces";
+
+			.category__item {
+				position: relative;
+
+				span {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(255, 255, 255, 0.7);
+					font-weight: 600;
+					font-size: 48px;
+					line-height: 133%;
+					letter-spacing: 0.02em;
+					color: $black-primary;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					opacity: 0;
+					transition: opacity 0.5s ease;
+
+					&::after {
+						content: "";
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translateX(-50%) translateY(-52px);
+						width: 60px;
+						height: 4px;
+						background-color: $black-primary;
+					}
+				}
+
+				&:hover span {
+					opacity: 1;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				&.earrings {
+					grid-area: earrings;
+				}
+
+				&.bracelets {
+					grid-area: bracelets;
+				}
+
+				&.rings {
+					grid-area: rings;
+				}
+
+				&.unusual {
+					grid-area: unusual;
+				}
+
+				&.necklaces {
+					grid-area: necklaces;
+				}
+			}
+		}
+	}
+
+	.blog-block {
+		padding-bottom: 120px;
+
+		.blog__title {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.image-block {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			max-width: 100%;
+
+			img {
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.blog-item {
+			&__title {
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 108%;
+				letter-spacing: 0.02em;
+				margin: 20px 0px 10px;
+				color: $black-primary;
+				display: block;
+			}
+
+			&__date {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 157%;
+				color: $grey;
+				margin-bottom: 10px;
+			}
+
+			&__desc {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 157%;
+				color: $dark-grey-secondary;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.new-collection {
+		position: relative;
+		overflow: hidden;
+		padding: 200px 0px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		.new-collection__bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		.new-collection__title {
+			position: relative;
+			z-index: 2;
+			font-family: $font-family;
+			font-weight: 600;
+			font-size: 60px;
+			line-height: 117%;
+			letter-spacing: 0.02em;
+			text-align: center;
+			color: $white;
+		}
+
+		.new-collection__btn {
+			position: relative;
+			z-index: 2;
+			margin: 0 auto;
+		}
+	}
+
+	.promo-block {
+		padding: 120px 0px;
+
+		.promo__video-block {
+			padding-bottom: 120px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 30px;
+
+			.video-block__info {
+				height: 100%;
+				border-bottom: 1px solid $grey;
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+				padding-top: 38.6%; /* 270/700 */
+				width: 100%;
+				position: relative;
+
+				.video-block__label {
+					position: absolute;
+					left: 4px;
+					top: 3px;
+					font-size: 14px;
+					line-height: 157%;
+				}
+
+				.video-block__desc {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 157%;
+					color: $black-primary;
+				}
+			}
+
+			.video-block__content {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				max-width: 100%;
+				aspect-ratio: 1 / 1;
+
+				.video-block__play {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translateX(-50%) translateY(-50%);
+					color: #ebddd5;
+					transition: color 0.3s ease;
+
+					&:hover {
+						color: #d4c3b9;
+					}
+				}
+
+				video {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.promo-list {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+
+			.promo__list-item {
+				aspect-ratio: 753/493;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+
+				&.gift-card__content {
+					padding: 94px 0px 0px 80px;
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					align-items: flex-start;
+					overflow: visible;
+
+					.gift-card__desc {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 157%;
+						color: $dark-grey-secondary;
+					}
+
+					.gift-card__price {
+						position: relative;
+
+						.price__dropdown {
+							position: absolute;
+							top: calc(100% + 12px);
+							border: 1px solid #d8d8d8;
+							padding: 14px 7px;
+							width: 100%;
+							display: flex;
+							flex-direction: column;
+							gap: 7px;
+							background-color: $white;
+							max-height: 0px;
+							overflow: hidden;
+							opacity: 0;
+							transition: all 0.5s ease;
+
+							&.opened {
+								opacity: 1;
+							}
+
+							.price__item {
+								button {
+									text-align: start;
+									width: 100%;
+									padding: 4px 0px 4px 14px;
+									font-family: $font-family;
+									font-weight: 300;
+									font-size: 14px;
+									line-height: 157%;
+									color: $dark-grey-secondary;
+									transition: all 0.5s ease;
+
+									&:hover {
+										color: $black-primary;
+										background-color: $light-grey;
+									}
+								}
+
+								&.active button {
+									background-color: $black-primary;
+									color: $white;
+
+									&:hover {
+										background-color: $black-primary;
+										color: $white;
+									}
+								}
+							}
+						}
+
+						.price__button {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							width: 210px;
+							border: 1px solid #d8d8d8;
+							padding: 9px 15px;
+							width: 240px;
+							font-family: $font-family;
+							font-weight: 300;
+							font-size: 14px;
+							line-height: 157%;
+							color: $black-primary;
+
+							@media (max-width: 1440px) {
+								width: 210px;
+								padding: 7px 12px;
+							}
+
+							svg {
+								transition: transform 0.5s ease;
+							}
+
+							&.active svg {
+								transform: rotate(-180deg);
+							}
+						}
+					}
+
+					.gift-card__buy-now {
+						width: 240px;
+
+						@media (max-width: 1440px) {
+							width: 210px;
+						}
+					}
+				}
+
+				&.sale__info {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					justify-content: center;
+					padding: 0px 80px;
+					align-items: flex-start;
+
+					.sale-info__desc {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 157%;
+						color: $dark-grey-secondary;
+					}
+				}
+
+				&.newsletter__info {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+					justify-content: center;
+					padding: 0px 80px;
+					align-items: flex-start;
+
+					.newsletter__desc {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 157%;
+						color: $dark-grey-secondary;
+					}
+
+					.newsletter__form {
+						display: flex;
+						gap: 20px;
+						flex-direction: column;
+						align-items: flex-start;
+
+						input {
+							padding: 14px 15px;
+							border: 1px solid #d8d8d8;
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 150%;
+							color: $black-primary;
+							width: 100%;
+
+							&::placeholder {
+								color: $dark-grey-secondary;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

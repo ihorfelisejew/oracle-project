@@ -1,25 +1,286 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>Oracle</title>
 	@@include('./partials/head.html')
 </head>
+
 <body>
-<!-- BEGIN  wrapper-->
-<div class="wrapper">
-	@@include('./sections/header.html')
-	<main class="main">
-		<h1>hello world!</h1>
-		<h2>hello world!</h2>
-		<h3>hello world!</h3>
-	</main>
-	@@include('./sections/footer.html',  {"socials": {
-		"fb": "facebook.com/include",
-		"tw": "twitter.com/include"
-	}})
-</div>
-<!-- END wrapper-->
-@@include('./partials/foot.html')
+	<!-- BEGIN  wrapper-->
+	<div class="wrapper">
+		@@include('./sections/header.html')
+		<main class="main__page">
+			<section class="first-screen">
+				<div class="first-screen__bg">
+					<img src="./img/main_first-screen-bg.png" alt="oracle - jewelry">
+				</div>
+				<div class="first-screen__content">
+					<h1 class="first-screen__title">
+						Jewelry is made with love
+					</h1>
+					<button class="first-screen__button btn white-btn">
+						Shop Now
+					</button>
+				</div>
+			</section>
+			<section class="popular-goods">
+				<div class="popular-goods__container">
+					<h2 class="popular-goods__title title">
+						Popular Items
+					</h2>
+					<div class="popular-goods__list">
+						@@include('sections/product.html', {
+						"title": "Kazaur Weaving Ring",
+						"image": "./img/main_popular-goods_1.png",
+						"price": "$132.00",
+						"label" : "New",
+						"oldPrice": ""
+						})
+
+						@@include('sections/product.html', {
+						"title": "Audrey Long Ring",
+						"image": "./img/main_popular-goods_2.png",
+						"price": "$92.00",
+						"label" : "New",
+						"oldPrice": ""
+						})
+
+						@@include('sections/product.html', {
+						"title": "Kazaur Male Ring",
+						"image": "./img/main_popular-goods_3.png",
+						"price": "$136.00",
+						"label" : "New",
+						"oldPrice": ""
+						})
+
+						@@include('sections/product.html', {
+						"title": "Guardian Luna Circle Necklace",
+						"image": "./img/main_popular-goods_4.png",
+						"price": "$180.00",
+						"label" : "New",
+						"oldPrice": ""
+						})
+					</div>
+					<div class="popular-goods__more-container">
+						<a href="#" class="popular-goods__more link">Show More</a>
+					</div>
+				</div>
+			</section>
+			<section class="categories">
+				<div class="categories__container">
+					<h2 class="categories__title">
+						Minimalism and simplicity combined with interesting shapes. Choose a piece of jewelry that you
+						like.
+					</h2>
+					<div class="categories__list">
+						<a href="#" class="category__item earrings">
+							<img src="./img/main_category_1.png" alt="Earrings">
+							<span>Earrings</span>
+						</a>
+						<a href="#" class="category__item bracelets">
+							<img src="./img/main_category_2.png" alt="Earrings">
+							<span>Bracelets</span>
+						</a>
+						<a href="#" class="category__item rings">
+							<img src="./img/main_category_3.png" alt="Earrings">
+							<span>Rings</span>
+						</a>
+						<a href="#" class="category__item unusual">
+							<img src="./img/main_category_4.png" alt="Earrings">
+							<span>Unusual</span>
+						</a>
+						<a href="#" class="category__item necklaces">
+							<img src="./img/main_category_5.png" alt="Earrings">
+							<span>Necklaces</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="blog-block">
+				<div class="blog__container">
+					<h2 class="blog__title title">
+						Blog
+					</h2>
+					<div class="blog__list swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide blog__item">
+								<a href="#" class="image-block">
+									<img src="./img/main__blog-1.png" alt="Jewelry Cleaning">
+								</a>
+								<a href="#" class="blog-item__title">
+									Jewelry Cleaning
+								</a>
+								<p class="blog-item__date">
+									March 25, 2022
+								</p>
+								<p class="blog-item__desc">
+									Experts strongly recommend not to do makeup before flying on an airplane, even if
+									there should be a very short flight. The fact is that the cabin is very low
+									humidity, it never rises ...
+								</p>
+								<a href="#" class="blog-item__more link">
+									Read More
+								</a>
+							</div>
+							<div class="swiper-slide blog__item">
+								<a href="#" class="image-block">
+									<img src="./img/main__blog-2.png" alt="Jewelry Cleaning">
+								</a>
+								<a href="#" class="blog-item__title">
+									Interesting and trendy forms
+								</a>
+								<p class="blog-item__date">
+									March 25, 2022
+								</p>
+								<p class="blog-item__desc">
+									Experts strongly recommend not to do makeup before flying on an airplane, even if
+									there should be a very short flight. The fact is that the cabin is very low
+									humidity, it never rises ...
+								</p>
+								<a href="#" class="blog-item__more link">
+									Read More
+								</a>
+							</div>
+							<div class="swiper-slide blog__item">
+								<a href="#" class="image-block">
+									<img src="./img/main__blog-3.png" alt="Jewelry Cleaning">
+								</a>
+								<a href="#" class="blog-item__title">
+									Pearls in gold jewelry
+								</a>
+								<p class="blog-item__date">
+									March 25, 2022
+								</p>
+								<p class="blog-item__desc">
+									Experts strongly recommend not to do makeup before flying on an airplane, even if
+									there should be a very short flight. The fact is that the cabin is very low
+									humidity, it never rises ...
+								</p>
+								<a href="#" class="blog-item__more link">
+									Read More
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="new-collection">
+				<img class="new-collection__bg" src="./img/main_new-collection_bg.png" alt="New Collection">
+				<h2 class="new-collection__title">
+					New Collection 2024
+				</h2>
+				<a href="#" class="new-collection__btn btn white-btn">
+					Shop Now
+				</a>
+			</section>
+			<section class="promo-block">
+				<div class="promo-block__container">
+					<div class="promo__video-block">
+						<div class="video-block__info">
+							<p class="video-block__label">
+								View our video presentation
+							</p>
+							<h2 class="video-block__title title">
+								Fierce elegance encapsulates genuineness, beauty and poise.
+							</h2>
+							<p class="video-block__desc">
+								It melds a strong essence of refinement with a hint of self-assured allure, yielding a
+								refined and commanding presence reminiscent of a resolute and graceful woman.
+							</p>
+						</div>
+						<div class="video-block__content">
+							<video loop playsinline poster="./img/main_video-preview.png">
+								<source src="./img/main_promo-video.mov" type="video/mp4" />
+								Oracle Jewelry - Elegance
+							</video>
+							<button class="video-block__play">
+								<svg width="120" height="120" viewBox="0 0 120 120" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M60 13.125C50.729 13.125 41.6662 15.8742 33.9577 21.0249C26.2491 26.1756 20.241 33.4964 16.6932 42.0617C13.1453 50.627 12.217 60.052 14.0257 69.1449C15.8344 78.2377 20.2988 86.59 26.8544 93.1456C33.41 99.7012 41.7623 104.166 50.8552 105.974C59.948 107.783 69.373 106.855 77.9383 103.307C86.5036 99.759 93.8245 93.7509 98.9752 86.0424C104.126 78.3338 106.875 69.271 106.875 60C106.861 47.5722 101.918 35.6573 93.1306 26.8694C84.3428 18.0816 72.4279 13.1386 60 13.125ZM60 103.125C51.4707 103.125 43.1329 100.596 36.0411 95.8571C28.9492 91.1185 23.4217 84.3833 20.1577 76.5032C16.8937 68.6232 16.0397 59.9522 17.7037 51.5867C19.3676 43.2213 23.4749 35.5372 29.506 29.506C35.5372 23.4749 43.2213 19.3676 51.5868 17.7036C59.9522 16.0396 68.6232 16.8937 76.5032 20.1577C84.3833 23.4217 91.1185 28.9492 95.8571 36.041C100.596 43.1329 103.125 51.4707 103.125 60C103.113 71.4337 98.5651 82.3955 90.4803 90.4803C82.3955 98.5651 71.4337 103.113 60 103.125ZM76.0406 58.4391L53.5406 43.4391C53.2582 43.2506 52.9299 43.1424 52.5908 43.126C52.2516 43.1095 51.9144 43.1855 51.6151 43.3458C51.3157 43.506 51.0655 43.7446 50.8911 44.0359C50.7168 44.3272 50.6248 44.6605 50.625 45V75C50.6246 75.3395 50.7164 75.6728 50.8906 75.9642C51.0648 76.2556 51.3149 76.4943 51.6141 76.6547C51.9136 76.8151 52.251 76.8911 52.5903 76.8745C52.9297 76.858 53.2581 76.7496 53.5406 76.5609L76.0406 61.5609C76.2978 61.3898 76.5087 61.1577 76.6546 60.8854C76.8005 60.6131 76.8769 60.3089 76.8769 60C76.8769 59.6911 76.8005 59.3869 76.6546 59.1146C76.5087 58.8423 76.2978 58.6102 76.0406 58.4391ZM54.375 71.4984V48.5016L71.6203 60L54.375 71.4984Z"
+										fill="currentColor" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="promo-list">
+						<div class="promo__list-item gift-card__image">
+							<img src="./img/main_gift-card.png" alt="ORACLE Gift Card">
+						</div>
+						<div class="promo__list-item gift-card__content">
+							<h3 class="gift-card__title title">
+								Gift Card
+							</h3>
+							<p class="gift-card__desc">
+								We don’t have any ideas what to give ourselves, or are you doubting your choice?A gift
+								certificate is a modern way to bring in friends and relatives, to pick out those who are
+								dear to your heart.
+							</p>
+							<div class="gift-card__price">
+								<button class="price__button">
+									<span>$200</span>
+									<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M9.03939 0.217251C9.08632 0.16946 9.15021 0.142578 9.21686 0.142578C9.28351 0.142578 9.3474 0.16946 9.39433 0.217251L9.92425 0.752434C9.97258 0.798244 10 0.862204 10 0.929145C10 0.996086 9.97258 1.06005 9.92425 1.10586L5.32995 5.74579C5.2597 5.81682 5.1644 5.85678 5.06499 5.85686L4.93501 5.85686C4.8356 5.85678 4.7403 5.81682 4.67005 5.74579L0.0757474 1.10586C0.0274162 1.06005 -3.7308e-08 0.996086 -3.43819e-08 0.929144C-3.14558e-08 0.862203 0.0274162 0.798243 0.0757475 0.752433L0.605667 0.21725C0.652601 0.169459 0.716492 0.142578 0.78314 0.142578C0.84979 0.142578 0.913679 0.169459 0.960613 0.21725L5 4.29676L9.03939 0.217251Z"
+											fill="currentColor" />
+									</svg>
+								</button>
+								<ul class="price__dropdown">
+									<li class="price__item active">
+										<button>$200</button>
+									</li>
+									<li class="price__item">
+										<button>$500</button>
+									</li>
+									<li class="price__item">
+										<button>$1000</button>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="gift-card__buy-now btn">Buy Now</a>
+						</div>
+						<div class="promo__list-item sale__info">
+							<h3 class="sale-info__title title">
+								Hurry! Sale 50%
+							</h3>
+							<p class="sale-info__desc">
+								We don’t have any ideas what to give ourselves, or are you doubting your choice?A gift
+								certificate is a modern way to bring in friends and relatives, to pick out those who are
+								dear to your heart.
+							</p>
+							<a href="#" class="sale-info__shop-now btn">
+								Shop Now
+							</a>
+						</div>
+						<div class="promo__list-item sale__image">
+							<img src="./img/main_sale-image.png" alt="Sale 50%">
+						</div>
+						<div class="promo__list-item newsletter__image">
+							<img src="./img/main_newsletter-image.png" alt="Newsletter">
+						</div>
+						<div class="promo__list-item newsletter__info">
+							<h3 class="newsletter__title title">
+								Newsletter
+							</h3>
+							<p class="newsletter__desc">
+								Sign up for exclusive deals and early access to new products.
+							</p>
+							<form class="newsletter__form">
+								<input type="email" name="email" id="email" placeholder="Your Email">
+								<button type="submit" class="newsletter__submit btn">Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('./sections/footer.html')
+	</div>
+	<!-- END wrapper-->
+	@@include('./partials/foot.html')
 </body>
+
 </html>
