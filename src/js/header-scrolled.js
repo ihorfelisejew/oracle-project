@@ -6,10 +6,10 @@ const headerMenuButtons = header.querySelectorAll(".menu-item__button");
 
 function checkPageScroll() {
 	if (window.scrollY > 0) {
-		shippingNotice.style.maxHeight = shippingNotice.scrollHeight + "px";
+		shippingNotice.style.maxHeight = "0";
 		header.classList.add("scrolled");
 	} else {
-		shippingNotice.style.maxHeight = "0";
+		shippingNotice.style.maxHeight = shippingNotice.scrollHeight + "px";
 		header.classList.remove("scrolled");
 	}
 }
