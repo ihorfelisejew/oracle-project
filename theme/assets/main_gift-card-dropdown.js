@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const giftCardBlock = document.querySelector(".promo-block .gift-card__price");
+  const input = giftCardBlock.querySelector("input");
   const button = giftCardBlock.querySelector(".price__button");
   const dropdown = giftCardBlock.querySelector(".price__dropdown");
   button.addEventListener("click", () => {
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       dropdown.style.maxHeight = dropdown.scrollHeight + 14 + "px";
     }
   });
-  const dropdownItems = dropdown.querySelectorAll(".dropdown__item");
+  const dropdownItems = dropdown.querySelectorAll(".price__item");
   dropdownItems.forEach(item => {
     item.addEventListener("click", () => {
       if (item.classList.contains("active")) {
@@ -21,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
       dropdownItems.forEach(otherItem => {
         otherItem.classList.remove("active");
       });
+      const itemButton = item.querySelector("button");
+      input.value = itemButton.textContent;
+      console.log(input.value);
       item.classList.add("active");
       closeDropdown(button, dropdown);
     });

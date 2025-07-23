@@ -498,7 +498,7 @@
 						<div class="promo__list-item gift-card__image">
 							<img src="./img/main_gift-card.png" alt="ORACLE Gift Card">
 						</div>
-						<div class="promo__list-item gift-card__content">
+						<form class="promo__list-item gift-card__content">
 							<h3 class="gift-card__title title">
 								Gift Card
 							</h3>
@@ -508,7 +508,8 @@
 								dear to your heart.
 							</p>
 							<div class="gift-card__price">
-								<button class="price__button">
+								<input type="hidden" name="price">
+								<button type="button" class="price__button">
 									<span>$200</span>
 									<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
 										xmlns="http://www.w3.org/2000/svg">
@@ -519,18 +520,18 @@
 								</button>
 								<ul class="price__dropdown">
 									<li class="price__item active">
-										<button>$200</button>
+										<button type="button">$200</button>
 									</li>
 									<li class="price__item">
-										<button>$500</button>
+										<button type="button">$500</button>
 									</li>
 									<li class="price__item">
-										<button>$1000</button>
+										<button type="button">$1000</button>
 									</li>
 								</ul>
 							</div>
-							<a href="#" class="gift-card__buy-now btn">Buy Now</a>
-						</div>
+							<button type="submit" class="gift-card__buy-now btn">Buy Now</button>
+						</form>
 						<div class="promo__list-item sale__info">
 							<h3 class="sale-info__title title">
 								Hurry! Sale 50%
