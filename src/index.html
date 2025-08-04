@@ -13,8 +13,21 @@
 		@@include('./sections/header.html')
 		<main class="main__page">
 			<section class="first-screen">
-				<div class="first-screen__bg">
-					<img src="./img/main_first-screen-bg.png" alt="oracle - jewelry">
+				<div class="first-screen__bg swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide first-screen__slide">
+							<img src="./img/main_first-screen-bg.png" alt="oracle - jewelry">
+						</div>
+						<div class="swiper-slide first-screen__slide">
+							<img src="./img/main_first-screen-bg.png" alt="oracle - jewelry">
+						</div>
+						<div class="swiper-slide first-screen__slide">
+							<img src="./img/main_first-screen-bg.png" alt="oracle - jewelry">
+						</div>
+						<div class="swiper-slide first-screen__slide">
+							<img src="./img/main_first-screen-bg.png" alt="oracle - jewelry">
+						</div>
+					</div>
 				</div>
 				<div class="first-screen__content">
 					<h1 class="first-screen__title">
@@ -209,7 +222,7 @@
 						<div class="promo__list-item gift-card__image">
 							<img src="./img/main_gift-card.png" alt="ORACLE Gift Card">
 						</div>
-						<form class="promo__list-item gift-card__content">
+						<div class="promo__list-item gift-card__content">
 							<h3 class="gift-card__title title">
 								Gift Card
 							</h3>
@@ -218,31 +231,33 @@
 								certificate is a modern way to bring in friends and relatives, to pick out those who are
 								dear to your heart.
 							</p>
-							<div class="gift-card__price">
-								<input type="hidden" name="price">
-								<button type="button" class="price__button">
-									<span>$200</span>
-									<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M9.03939 0.217251C9.08632 0.16946 9.15021 0.142578 9.21686 0.142578C9.28351 0.142578 9.3474 0.16946 9.39433 0.217251L9.92425 0.752434C9.97258 0.798244 10 0.862204 10 0.929145C10 0.996086 9.97258 1.06005 9.92425 1.10586L5.32995 5.74579C5.2597 5.81682 5.1644 5.85678 5.06499 5.85686L4.93501 5.85686C4.8356 5.85678 4.7403 5.81682 4.67005 5.74579L0.0757474 1.10586C0.0274162 1.06005 -3.7308e-08 0.996086 -3.43819e-08 0.929144C-3.14558e-08 0.862203 0.0274162 0.798243 0.0757475 0.752433L0.605667 0.21725C0.652601 0.169459 0.716492 0.142578 0.78314 0.142578C0.84979 0.142578 0.913679 0.169459 0.960613 0.21725L5 4.29676L9.03939 0.217251Z"
-											fill="currentColor" />
-									</svg>
-								</button>
-								<ul class="price__dropdown">
-									<li class="price__item active">
-										<button type="button">$200</button>
-									</li>
-									<li class="price__item">
-										<button type="button">$500</button>
-									</li>
-									<li class="price__item">
-										<button type="button">$1000</button>
-									</li>
-								</ul>
-							</div>
-							<button type="submit" class="gift-card__buy-now btn">Buy Now</button>
-						</form>
+							<form class="gift-card__buy-form">
+								<div class="gift-card__price">
+									<input type="hidden" name="price">
+									<button type="button" class="price__button">
+										<span>$200</span>
+										<svg width="10" height="6" viewBox="0 0 10 6" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M9.03939 0.217251C9.08632 0.16946 9.15021 0.142578 9.21686 0.142578C9.28351 0.142578 9.3474 0.16946 9.39433 0.217251L9.92425 0.752434C9.97258 0.798244 10 0.862204 10 0.929145C10 0.996086 9.97258 1.06005 9.92425 1.10586L5.32995 5.74579C5.2597 5.81682 5.1644 5.85678 5.06499 5.85686L4.93501 5.85686C4.8356 5.85678 4.7403 5.81682 4.67005 5.74579L0.0757474 1.10586C0.0274162 1.06005 -3.7308e-08 0.996086 -3.43819e-08 0.929144C-3.14558e-08 0.862203 0.0274162 0.798243 0.0757475 0.752433L0.605667 0.21725C0.652601 0.169459 0.716492 0.142578 0.78314 0.142578C0.84979 0.142578 0.913679 0.169459 0.960613 0.21725L5 4.29676L9.03939 0.217251Z"
+												fill="currentColor" />
+										</svg>
+									</button>
+									<ul class="price__dropdown">
+										<li class="price__item active">
+											<button type="button">$200</button>
+										</li>
+										<li class="price__item">
+											<button type="button">$500</button>
+										</li>
+										<li class="price__item">
+											<button type="button">$1000</button>
+										</li>
+									</ul>
+								</div>
+								<button type="submit" class="gift-card__buy-now btn">Buy Now</button>
+							</form>
+						</div>
 						<div class="promo__list-item sale__info">
 							<h3 class="sale-info__title title">
 								Hurry! Sale 50%

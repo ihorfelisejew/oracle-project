@@ -11,6 +11,19 @@
 	transition: all 0.3s ease;
 	border: 1px solid $black-primary;
 
+	@media (max-width: 1110px) {
+		padding: 18px 72px;
+	}
+
+	@media (max-width: 768px) {
+		padding: 15px 64px;
+		font-size: 12px;
+	}
+
+	@media (max-width: 467px) {
+		padding: 15px 60px;
+	}
+
 	&.white-btn {
 		background-color: $white;
 		color: $black-primary;

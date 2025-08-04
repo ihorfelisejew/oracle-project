@@ -3,10 +3,40 @@
 		padding: 50px 0px;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 
+		@media (max-width: 1110px) {
+			padding: 40px 0px;
+		}
+
+		@media (max-width: 768px) {
+			border-top: none;
+			padding: 30px 0px;
+		}
+
 		&__content {
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
+
+			@media (max-width: 980px) {
+				display: grid;
+				grid-template-columns: repeat(6, 1fr);
+				row-gap: 30px;
+				column-gap: 20px;
+
+				grid-template-areas:
+					"jewelry jewelry collections collections company company"
+					"follow follow follow story story story";
+			}
+
+			@media (max-width: 710px) {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 30px;
+
+				grid-template-areas:
+					"jewelry collections"
+					"company follow"
+					"story story";
+			}
 
 			.column__title {
 				font-family: $font-family;
@@ -22,6 +52,24 @@
 				display: flex;
 				flex-direction: column;
 				gap: 20px;
+
+				@media (max-width: 1280px) {
+					gap: 15px;
+				}
+
+				@media (max-width: 980px) {
+					&.footer__categories {
+						grid-area: jewelry;
+					}
+
+					&.footer__collections {
+						grid-area: collections;
+					}
+
+					&.footer__pages {
+						grid-area: company;
+					}
+				}
 
 				.footer__item-link {
 					font-family: $font-family;
@@ -44,12 +92,26 @@
 				gap: 20px;
 				max-width: 11.2%; /* 168/1506 */
 
+				@media (max-width: 1280px) {
+					gap: 15px;
+				}
+
+				@media (max-width: 980px) {
+					grid-area: follow;
+					max-width: 100%;
+				}
+
 				.social__list {
 					display: flex;
 					flex-direction: row;
 					flex-wrap: wrap;
 					column-gap: 12px;
 					row-gap: 20px;
+
+					@media (max-width: 1280px) {
+						column-gap: 10px;
+						row-gap: 15px;
+					}
 
 					.social-link {
 						color: $black-primary;
@@ -79,6 +141,15 @@
 				gap: 20px;
 				max-width: 32%; /* 482/1506 */
 
+				@media (max-width: 1280px) {
+					gap: 15px;
+				}
+
+				@media (max-width: 980px) {
+					grid-area: story;
+					max-width: 100%;
+				}
+
 				.story__text {
 					font-family: $font-family;
 					font-weight: 300;
@@ -94,6 +165,10 @@
 	&-bottom {
 		padding: 30px 0px 40px;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+		@media (max-width: 768px) {
+			padding: 30px 0px;
+		}
 
 		.bottom__content {
 			display: grid;
@@ -114,6 +189,25 @@
 				row-gap: 20px;
 			}
 
+			@media (max-width: 980px) {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-areas:
+					"currency language"
+					"payments payments"
+					"copyright copyright";
+				column-gap: 20px;
+			}
+
+			@media (max-width: 468px) {
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					"currency"
+					"language"
+					"copyright"
+					"payments";
+				gap: 15px;
+			}
+
 			.info-block {
 				position: relative;
 
@@ -132,6 +226,26 @@
 
 					&:nth-child(2) {
 						grid-area: language;
+					}
+				}
+
+				@media (max-width: 980px) {
+					display: flex;
+
+					&:first-child {
+						justify-content: flex-end;
+					}
+
+					&:nth-child(2) {
+						justify-content: flex-start;
+					}
+				}
+
+				@media (max-width: 468px) {
+					width: 100%;
+					&:first-child,
+					&:nth-child(2) {
+						justify-content: center;
 					}
 				}
 
@@ -203,6 +317,10 @@
 						padding: 7px 12px;
 					}
 
+					@media (max-width: 468px) {
+						width: 100%;
+					}
+
 					svg {
 						transition: transform 0.5s ease;
 					}
@@ -247,6 +365,16 @@
 
 				@media (max-width: 1280px) {
 					grid-area: payments;
+				}
+
+				@media (max-width: 980px) {
+					justify-self: center;
+					gap: 24px;
+				}
+
+				@media (max-width: 468px) {
+					justify-content: space-around;
+					width: 100%;
 				}
 			}
 		}
