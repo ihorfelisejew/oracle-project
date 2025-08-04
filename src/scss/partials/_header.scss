@@ -415,6 +415,10 @@
 			}
 		}
 
+		@media (max-width: 460px) {
+			width: 80vw;
+		}
+
 		.categories__list {
 			display: flex;
 			align-items: flex-start;
