@@ -347,7 +347,8 @@
 	}
 
 	&.scrolled,
-	&.opened {
+	&.opened,
+	&.not-home-header {
 		background-color: #fff;
 
 		.header__content {
@@ -388,6 +389,21 @@
 
 					&:hover {
 						color: $dark-grey-secondary;
+					}
+				}
+			}
+		}
+	}
+
+	&.not-home-header {
+		border-bottom: 1px solid rgba($black-primary, 0.1);
+
+		.header__content {
+			.header__info {
+				.header__logo-image {
+					&.dark {
+						position: relative !important;
+						opacity: 1;
 					}
 				}
 			}
